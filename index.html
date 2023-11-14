@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <style>
+ body{
+  padding: 0px;
+  margin: 0px;
+  background: linear-gradient(190deg,cyan,blue);
+  background-attachment: fixed;
+  background-size: cover;
+  
+  
+}
+.game-hover{
+  width: 60vw;
+  height: 30vh;
+  background: #fff;
+  margin: 12.6vh;
+  margin-top: 10vh;
+  text-align: center;
+  border-radius: 2vw;
+  display: block;
+  position: absolute;
+}
+.textgame-hover{
+  font-size:4vh;
+  color: red;
+  margin-top: 10vh;
+  display: block;
+}
+.container{
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(190deg,cyan,blue);
+  display: none;
+  text-align: center;
+}
+.cajatext{
+  width: 100vw;
+  padding: 2vh 0;
+  background: linear-gradient(190deg,cyan,blue);
+
+}
+.text{
+  padding: 0px;
+  margin: 0px;
+  font-size: 2.5vh;
+  font-weight: bold;
+color: #00ff52;
+  
+}
+ .pregunta{
+   transform: translateX(-100vw);
+   transition: 2s;
+   margin-top: 10vw;
+ }
+.preguntas{
+  color:#111;
+  padding: 2vw 1vh;
+  margin-bottom: 10vh;
+  text-align: center;
+  font-size: 2.5vh;
+  font-weight: bold;
+  
+}
+#tema{
+  color:black ;
+}
+.tema{
+  transform: translateY(-4vh) translateX(-15vh);
+}
+.button{
+  width: 60vw;
+  padding: 2vh;
+  margin: 2vh;
+  text-align: center;
+  font-size: 2.5vh;
+  font-weight: bold;
+  border-style:solid;
+  border-radius: 3vw;
+}
+.correct {
+      
+      background: linear-gradient(190deg,rgb(31,200,13),#dcf31e);
+    box-shadow: 1vh 1vh 1vw cyan; 
+    transform: rotate(-360deg);
+      
+    }
+.incorrect {
+      background: linear-gradient(190deg,rgb(200,50,13),rgb(198,69,101));
+      box-shadow: 1vh 1vh 1vw red;
+      
+      ;
+    }
+.btn{
+  width: 40vw;
+  padding: 2vh;
+  margin: 2vh;
+  text-align: center;
+  font-size: 2.5vh;
+  font-weight: bold;
+  border-style:none;
+  border-radius: 3vw;
+  background: linear-gradient(190deg,rgb(194,198,69),rgb(69,198,140));
+  transition: 2s;
+  animation: pulso 2s infinite ;
+  
+}
+@keyframes pulso {
+  0%{
+    transform: scale(1);
+  }
+  50%{
+    transform: scale(0.5);
+    
+  }
+  100%{
+    transform: scale(1);
+  }
+}
+ @keyframes  preguntas {
+   0%{
+     opacity: 1;
+     
+   }
+   50%{
+     opacity: 0;
+   }
+   100%{
+     opacity: 1;
+     
+   }
+ }
+  </style>
+  <title>html</title>
+</head>
+<body>
+  <header class="container" id="container">
+    <article class="cajatext">
+      <p class="text">conocimientos de programación y desarrollo web</p>
+    </article>
+    <header class="pregunta" id="pregunta">
+      <article>
+        <p class="text tema">Tema: <span id="tema">Desarrollo web</span></p>
+      </article>
+      <p class="text preguntas" id="preguntas">
+        ¿Cuál es el lenguaje de programación que se ejecuta en los navegadores y funciona para darle interactividad a las páginas web?
+      </p>
+      <button class="button" onclick="verificarRespuesta(this)">
+        JavaScript
+      </button>
+      <button class="button" onclick="verificarRespuesta(this)">
+        Python
+      </button>
+      <button class="button" onclick="verificarRespuesta(this)">
+        PHP
+      </button>
+    </header>
+  </header>
+<header class="game-hover" id="game-hover">
+  <h1 class="textgame-hover">Game Hover</h1>
+  <button class="btn" onclick="volverajugar()">volver a jugar </button>
+</header>
+  <script src="Index.js"></script>
+
+</body>
+</html>
